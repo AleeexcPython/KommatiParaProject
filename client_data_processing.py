@@ -3,8 +3,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import col
 import logging
 
-def filter_data(df):
-    countries_to_filter = ["United Kingdom", "Netherlands"]
+def filter_data(df, countries_to_filter):
     return df.filter(col("country").isin(countries_to_filter))
 
 def remove_personal_info(df):
@@ -45,12 +44,8 @@ def main(dataset_one_path, dataset_two_path, countries_to_filter, output_path):
     joined_df.show()
 
     # Save the processed data to the client_data directory
-    joined_df.write.mode("overwrite").csv(
-        "/Users/alexchiu/PycharmProjects/KommatiParaProject/client_data")
-
-    # Corrected logging.info statement
+    joined_df.write.mode("overwrite").csv(output_path)
     logging.info(f"Processed data saved to: {output_path}")
-
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
