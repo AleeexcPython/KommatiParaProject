@@ -30,6 +30,8 @@ bash: python script.py <dataset_one_path> <dataset_two_path> <countries>
 **dataset_one_path**: Path to the first dataset file.
 **dataset_two_path**: Path to the second dataset file.
 **countries**: Comma-separated list of countries for filtering clients.
+**Example command-line**; python3 Abosolute file dataset_one  Absolute 
+ file dataset_two "United Kingdom,Netherlands"
 
 **Requirements**
 Python 3.8
