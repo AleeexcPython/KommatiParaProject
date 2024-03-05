@@ -47,12 +47,6 @@ The processed data will be stored in the 'client_data' directory.
 
 **Testing**
 Test Script (test_script.py)
-The test_script.py file contains unit tests for the functions filter_data and remove_personal_info in the client_data_processing module.
-
-Test filter_data Function
-This test ensures that the filter_data function correctly filters clients based on specified countries. It creates a Spark DataFrame with sample data, applies the filter, and asserts the equality of the resulting DataFrame with the expected DataFrame.
-
-Test remove_personal_info Function
-This test ensures that the remove_personal_info function correctly removes personally identifiable information from the input DataFrame. It creates a Spark DataFrame with sample data, applies the transformation, and asserts the equality of the resulting DataFrame with the expected DataFrame.
+The test_script.py file contains unit tests for the functions filters: filter_data, remove_personal_info, remove creditcard column and rename columns in the client_data_processing module.
 
 Use: *pytest test_script.py** in bash to test the script.  
